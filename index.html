@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdCraft Day Book</title>
+  <!-- Local Fonts or System Fonts Fallback -->
+  <style>
+    /* basic reset or font declaration if local fonts are added later */
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3f4f6;
+        font-family: sans-serif;
+      }
+
+      .loader {
+        border: 4px solid #e5e7eb;
+        border-top: 4px solid #4f46e5;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 1rem;
+      }
+
+      .loading-container {
+        text-align: center;
+        color: #374151;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <div class="loading-container">
+      <div class="loader"></div>
+      <div>Starting AdCraft DayBook...</div>
+      <div style="font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">Optimizing for your system...</div>
+    </div>
+  </div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

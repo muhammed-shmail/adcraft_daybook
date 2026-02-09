@@ -1,0 +1,58 @@
+{
+  "name": "adcraft-day-book",
+  "description": "AdCraft Day Book Application",
+  "author": "AdCraft",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"cross-env BROWSER=none npm run dev\" \"wait-on -t 20000 http://localhost:3015 && electron .\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.adcraft.daybook",
+    "productName": "Adcraft",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "public/icon.png"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.png"
+    }
+  },
+  "dependencies": {
+    "@types/qrcode": "^1.5.6",
+    "jspdf": "^3.0.4",
+    "jspdf-autotable": "^5.0.2",
+    "lucide-react": "^0.562.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.3",
+    "react-barcode": "^1.6.1",
+    "react-dom": "^19.2.3",
+    "recharts": "^3.5.1",
+    "vite-plugin-pwa": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.23",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.2",
+    "vite": "^5.4.21",
+    "wait-on": "^9.0.3"
+  }
+}
