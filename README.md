@@ -1,0 +1,1 @@
+# adcraft_daybook
